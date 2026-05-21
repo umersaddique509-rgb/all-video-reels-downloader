@@ -10,8 +10,7 @@
         .container { background: #1e293b; width: 100%; max-width: 600px; padding: 40px 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-align: center; }
         h1 { font-size: 2.2rem; margin-bottom: 10px; color: #38bdf8; }
         p { color: #94a3b8; margin-bottom: 30px; font-size: 1rem; }
-        .input-area { display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px; }
-        input { width: 100%; padding: 15px; border-radius: 8px; border: 2px solid #334155; background: #0f172a; color: #fff; font-size: 1rem; outline: none; transition: border-color 0.3s; }
+        input { width: 100%; padding: 15px; border-radius: 8px; border: 2px solid #334155; background: #0f172a; color: #fff; font-size: 1rem; outline: none; transition: border-color 0.3s; margin-bottom: 15px; }
         input:focus { border-color: #38bdf8; }
         button { width: 100%; padding: 15px; background: #38bdf8; color: #0f172a; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
         button:hover { background: #0ea5e9; }
@@ -24,30 +23,15 @@
         <h1>Video & Reels Downloader</h1>
         <p>Download Instagram Reels, TikTok, and Facebook Videos in HD with No Watermark.</p>
         
-        <div class="input-area">
-            <input type="text" id="videoUrl" placeholder="Paste video or reels link here...">
-            <button onclick="downloadVideo()">Download Now</button>
-        </div>
+        <form action="https://api.vkrproductions.com/api/v1/downloader" method="GET" target="_blank">
+            <input type="text" name="url" placeholder="Paste video or reels link here..." required>
+            <button type="submit">Download Now</button>
+        </form>
 
         <div class="ad-box">
             Advertisement Place (Google AdSense)
         </div>
     </div>
-
-    <script>
-        function downloadVideo() {
-            const url = document.getElementById('videoUrl').value;
-
-            if(!url) {
-                alert('Please paste a video link first!');
-                return;
-            }
-
-            // ਇਹ ਸਿਸਟਮ ਬਿਨਾਂ ਰੁਕੇ ਯੂਜ਼ਰ ਨੂੰ ਸਿੱਧਾ ਡਾਊਨਲੋਡ ਪੇਜ 'ਤੇ ਲੈ ਜਾਵੇਗਾ
-            let cleanUrl = encodeURIComponent(url);
-            window.open(https://api.vkrproductions.com/api/v1/downloader?url=${cleanUrl}, '_blank');
-        }
-    </script>
 
 </body>
 </html>
