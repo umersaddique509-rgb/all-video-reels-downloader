@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Video & Reels Downloader - No Watermark</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .container { background: #1e293b; width: 100%; max-width: 600px; padding: 40px 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; border: 1px solid #334155; }
+        h1 { font-size: 2rem; margin-bottom: 10px; color: #38bdf8; }
+        p { color: #94a3b8; margin-bottom: 30px; font-size: 1rem; }
+        .input-area { display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px; }
+        input { width: 100%; padding: 15px; border-radius: 8px; border: 2px solid #334155; background: #0f172a; color: #fff; font-size: 1rem; outline: none; transition: 0.3s; }
+        input:focus { border-color: #38bdf8; }
+        button { width: 100%; padding: 15px; border: none; border-radius: 8px; background: #38bdf8; color: #0f172a; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #0ea5e9; transform: translateY(-2px); }
+        .ad-box { margin-top: 30px; padding: 20px; background: #0f172a; border: 1px dashed #475569; border-radius: 8px; color: #64748b; font-size: 0.9rem; }
+        .footer { margin-top: 30px; color: #64748b; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>All Video & Reels Downloader</h1>
+    <p>Download Instagram, TikTok & Facebook Videos with No Watermark</p>
+    
+    <div class="input-area">
+        <input type="text" id="videoUrl" placeholder="ਇੱਥੇ ਵੀਡੀਓ ਜਾਂ ਰੀਲ ਦਾ ਲਿੰਕ ਪੇਸਟ ਕਰੋ...">
+        <button onclick="downloadVideo()">Download Now</button>
+    </div>
+
+    <div class="ad-box">
+        <p>Sponsored Advertisement</p>
+        </div>
+
+    <div class="footer">
+        &copy; 2026 All Video Downloader | 100% Free & Fast
+    </div>
+</div>
+
+<script>
+function downloadVideo() {
+    let url = document.getElementById('videoUrl').value;
+    if(!url) {
+        alert('ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਕੋਈ ਲਿੰਕ ਪਾਓ!');
+        return;
+    }
+    alert('Processing... ਤੁਹਾਡੀ ਵੀਡੀਓ ਡਾਊਨਲੋਡ ਹੋ ਰਹੀ ਹੈ।');
+    // ਇੱਥੇ ਅਸੀਂ ਅੱਗੇ ਜਾ ਕੇ ਡਾਊਨਲੋਡਿੰਗ ਦਾ ਅਸਲੀ ਏਪੀਆਈ (API) ਲਿੰਕ ਜੋੜਾਂਗੇ
+}
+</script>
+
+</body>
+</html>
